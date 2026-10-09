@@ -14,6 +14,48 @@ body {
     min-height: 100vh;
 }
 
+/* sirkler i bakgrunnen som flyter sakte rundt */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.blob-1 {
+    width: 450px;
+    height: 450px;
+    background: rgb(4, 255, 138);
+    top: 10%;
+    right: 15%;
+    animation: sveve 20s ease-in-out infinite alternate;
+}
+
+.blob-2 {
+    width: 400px;
+    height: 400px;
+    background: rgb(51, 191, 204);
+    bottom: 7%;
+    left: 52%;
+    animation: sveve 25s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes sveve {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(40px, -50px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-30px, 30px) scale(0.95);
+    }
+}
+
 header {
     position: fixed;
     top: 0;
@@ -87,6 +129,11 @@ section {
     position: relative;
 }
 
+section.hjem,
+.hjem-container {
+    position: relative;
+}
+
 .hjem {
     display: flex;
     align-items: center;
@@ -104,6 +151,8 @@ section {
 
 .infobox {
     max-width: 500px;
+    position: relative;
+    z-index: 1;
 }
 
 .infobox .text h1 {
@@ -179,14 +228,12 @@ section {
     margin: 0 auto;
 }
 
-/* Tekstbeholder */
 section.ommeg .infobox,
 section.ommeg .text {
     width: 100% !important;
     max-width: none !important;
 }
 
-/* Overskrift */
 section.ommeg .infobox h1 {
     color: rgb(211, 219, 248);
     font-size: 3rem;
