@@ -10,11 +10,8 @@
 
 body {
     background-color: #0b162c;
-    /* Mørk bakgrunnsfarge for hele siden */
     color: #ffffff;
-    /* Standard hvit tekstfarge for alt innhold */
     min-height: 100vh;
-    /* Sørger for at bakgrunnen alltid dekker 100% av skjermhøyden */
 }
 
 header {
@@ -90,29 +87,23 @@ section {
     position: relative;
 }
 
-.om {
+.hjem {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.om .om-container {
+.hjem .hjem-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10rem;
 }
 
-.om img {
-    width: 30vw;
-    border-radius: 40%;
-}
-
 
 
 .infobox {
     max-width: 500px;
-    /* Sørger for at teksten breaker nedover i stedet for å strekke seg ut */
 }
 
 .infobox .text h1 {
@@ -132,7 +123,6 @@ section {
     color: #9ca3af;
     line-height: 1.6;
     text-wrap: balance;
-    /* Fordeler linjene jevnt */
 }
 
 
@@ -169,13 +159,91 @@ section {
 .socials a {
     color: #ffffff;
     font-size: 1.5rem;
-    /* Gjør ikonene tydeligere og større */
     transition: all 0.3s ease-in-out;
 }
 
 .socials a:hover {
     color: rgb(4, 255, 138);
-    /* Bytter til den grønne neongløden når du hovrer */
     transform: translateY(-2px);
-    /* Liten løft-effekt */
+}
+
+
+/* Om meg seksjonen */
+
+.ommeg-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 50px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tekstbeholder */
+section.ommeg .infobox,
+section.ommeg .text {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* Overskrift */
+section.ommeg .infobox h1 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+section.ommeg .infobox p {
+    line-height: 1.85;
+    letter-spacing: 0.4px;
+    word-spacing: 1px;
+    margin-bottom: 24px;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.skills-list {
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 36px 0;
+}
+
+.skills-list li {
+    position: relative;
+    padding-left: 20px;
+    font-family: monospace;
+}
+
+.skills-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #64ffda;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 320px;
+    max-width: 100%;
+}
+
+/* Selve bildet */
+.img-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    object-fit: cover;
+
+    /* Animasjon for hover */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+
+/* Bildet løftes */
+.img-wrapper:hover img {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
