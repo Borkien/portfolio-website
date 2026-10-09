@@ -10,7 +10,7 @@
 
 body {
     background-color: #0b162c;
-    color: #ffffff;
+    color: rgb(211, 219, 248);
     min-height: 100vh;
 }
 
@@ -28,14 +28,14 @@ header {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-    color: white;
+    color: rgb(211, 219, 248);
     padding: 1rem 2rem;
     z-index: 1000;
 
 }
 
 .logo {
-    color: white;
+    color: rgb(211, 219, 248);
     font-size: 1.3rem;
     font-weight: 600;
     text-wrap: nowrap;
@@ -54,7 +54,7 @@ header {
 li a {
     font-size: 1.25rem;
     position: relative;
-    color: white;
+    color: rgb(211, 219, 248);
     font-weight: 300;
 }
 
@@ -120,7 +120,7 @@ section {
 .infobox .text p {
     font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
-    color: #9ca3af;
+    color: rgba(211, 219, 248, 0.61);
     line-height: 1.6;
     text-wrap: balance;
 }
@@ -134,7 +134,7 @@ section {
     display: inline-block;
     padding: 0.6rem 1.6rem;
     border: 1px solid rgb(4, 255, 138);
-    color: #ffffff;
+    color: rgb(4, 255, 138);
     border-radius: 0.5rem;
     font-size: 1.1rem;
     cursor: pointer;
@@ -157,7 +157,7 @@ section {
 }
 
 .socials a {
-    color: #ffffff;
+    color: rgb(211, 219, 248);
     font-size: 1.5rem;
     transition: all 0.3s ease-in-out;
 }
@@ -188,11 +188,13 @@ section.ommeg .text {
 
 /* Overskrift */
 section.ommeg .infobox h1 {
+    color: rgb(211, 219, 248);
     font-size: 3rem;
     margin-bottom: 24px;
 }
 
 section.ommeg .infobox p {
+    color: rgb(211, 219, 248, 0.61);
     line-height: 1.85;
     letter-spacing: 0.4px;
     word-spacing: 1px;
@@ -201,7 +203,19 @@ section.ommeg .infobox p {
     max-width: none !important;
 }
 
+/* highlight for nøkkelord */
+section.ommeg .infobox p .cyber,
+section.ommeg .infobox p .optech {
+    font-weight: bold;
+    font-size: 1.35rem;
+    line-height: 1.85;
+    letter-spacing: 0.4px;
+    word-spacing: 1px;
+    margin-bottom: 24px;
+}
+
 .skills-list {
+    color: rgb(4, 255, 138);
     font-size: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
